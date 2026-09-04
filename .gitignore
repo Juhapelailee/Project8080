@@ -1,0 +1,11 @@
+data/
+*.csv
+*.h5
+*.nii
+*.nii.gz
+venv/
+__pycache__/
+.env
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
