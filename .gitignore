@@ -9,3 +9,10 @@ __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
+*.pth
+*.pt
+checkpoints/
+runs/
+logs/
+wandb/
+*.png
