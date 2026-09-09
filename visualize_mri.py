@@ -39,7 +39,7 @@ def show_three_views(data: np.ndarray, title: str = "") -> None:
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    # np.rot90 kääntää leikkeen anatomisesti oikeinpäin kuvaa varten
+    # np.rot90 rotates the slice so it displays anatomically right-side up
     axes[0].imshow(np.rot90(sagittal), cmap="gray")
     axes[0].set_title("Sagittal")
     axes[0].axis("off")
@@ -55,7 +55,7 @@ def show_three_views(data: np.ndarray, title: str = "") -> None:
     fig.suptitle(title, fontsize=14)
     plt.tight_layout()
     plt.savefig("mri_three_views.png", dpi=150, bbox_inches="tight")
-    print("Kuva tallennettu: mri_three_views.png")
+    print("Image saved: mri_three_views.png")
     plt.show()
 
 
@@ -63,8 +63,8 @@ def main() -> None:
     path = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_PATH
 
     if not Path(path).exists():
-        print(f"Virhe: tiedostoa ei löydy polusta '{path}'")
-        print("Anna oikea polku argumenttina: python visualize_mri.py polku/tiedostoon.nii.gz")
+        print(f"Error: file not found at path '{path}'")
+        print("Provide the correct path as an argument: python visualize_mri.py path/to/file.nii.gz")
         sys.exit(1)
 
     data = load_scan(path)
