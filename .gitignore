@@ -16,3 +16,5 @@ runs/
 logs/
 wandb/
 *.png
+harjoitus.py
+
