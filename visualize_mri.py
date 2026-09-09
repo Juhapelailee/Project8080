@@ -39,7 +39,7 @@ def show_three_views(data: np.ndarray, title: str = "") -> None:
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    # np.rot90 kääntää leikkeen anatomisesti oikeinpäin kuvaa varten
+    # np.rot90 flips the file leikkeen anatomically "right"
     axes[0].imshow(np.rot90(sagittal), cmap="gray")
     axes[0].set_title("Sagittal")
     axes[0].axis("off")
